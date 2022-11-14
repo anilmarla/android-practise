@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_small"
+    android:background="@color/white"
+    tools:context=".TextActivity">
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_assignment_late_24" />
+    
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize"
+        android:textColor="@color/black"
+        android:text="@string/text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/padding_small"
+        app:layout_constraintStart_toEndOf="@id/imageView" />
+
+    <TextView android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_date"
+        android:textSize="@dimen/textSizeSmall"
+        android:layout_marginStart="@dimen/marginText"
+        app:layout_constraintStart_toStartOf="@id/text11"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/text11"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        android:layout_marginTop="@dimen/activity_default_padding"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

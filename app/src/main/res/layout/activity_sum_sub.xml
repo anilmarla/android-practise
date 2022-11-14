@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_default_padding"
+    tools:context=".SumSubActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstnumberinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enternumber1"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_default_padding"
+        app:layout_constraintTop_toBottomOf="@id/firstnumber">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/secondnumberinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enternumber2"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/firstnumber"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/sum_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_default_padding"
+        android:text="Sum"
+        app:layout_constraintTop_toBottomOf="@id/secondnumber"/>
+
+    <Button
+        android:id="@+id/sub_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sub"
+        android:layout_marginTop="@dimen/activity_default_padding"
+        app:layout_constraintTop_toBottomOf="@id/sum_button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
