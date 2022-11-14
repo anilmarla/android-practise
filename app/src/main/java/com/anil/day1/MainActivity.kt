@@ -12,7 +12,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initButtonClicks()
+    }
 
+
+    // Adding button clicks and navigating to new screen
+    private fun initButtonClicks() {
         //        https://dribbble.com/shots/19153569-Mobile-App-iOS-Android-UI
 
         binding.radioButton.setOnClickListener {
@@ -57,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.mobileButton.setOnClickListener {
-            val intent = Intent(this, MobileActivity::class.java )
+            val intent = Intent(this, MobileActivity::class.java)
             startActivity(intent)
         }
         binding.sumsubButton.setOnClickListener {
@@ -72,7 +77,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CardViewActivity::class.java)
             startActivity(intent)
         }
-
+        binding.menuActivity.setOnClickListener {
+            val intent = Intent(this, ToolbarMenuActivity::class.java)
+            startActivity(intent)
         }
-
     }
+
+}
