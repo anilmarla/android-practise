@@ -11,9 +11,10 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         if(intent != null){
-            val name = intent.extras?.getString("name")
-            val value = intent.extras?.getInt("value")
-            val number = intent.extras?.getString("number")
+            val data = intent?.getBundleExtra("data")
+            val name = data?.getString("name")
+            val value = data?.getInt("value")
+            val number = data?.getString("number")
 
             Toast.makeText(this, "Name: $name, Value: $value", Toast.LENGTH_SHORT).show()
         }

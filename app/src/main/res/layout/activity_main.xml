@@ -136,6 +136,13 @@
                 android:text="Toolbar Menus"
                 app:layout_constraintTop_toBottomOf="@id/card_view" />
 
+            <Button
+                android:id="@+id/lifecycle_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Life Cycle"
+                app:layout_constraintTop_toBottomOf="@id/menu_activity" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

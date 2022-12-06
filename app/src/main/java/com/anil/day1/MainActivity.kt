@@ -81,6 +81,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ToolbarMenuActivity::class.java)
             startActivity(intent)
         }
+        binding.lifecycleActivity.setOnClickListener {
+            val intent = Intent(this, LifecycleActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

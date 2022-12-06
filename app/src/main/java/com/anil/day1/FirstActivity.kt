@@ -13,11 +13,18 @@ class FirstActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSend.setOnClickListener {
-            val entermobile = binding.enterLayout.editText.toString()
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("value", 10)
-            intent.putExtra("name", "Anil")
-            intent.putExtra("mobileNo", entermobile)
+            val entermobile = binding.enterLayoutText.text.toString()
+
+            val data = Bundle().apply {
+                putInt("value", 10)
+                putString("name", "Anil")
+                putString("mobileNo", entermobile)
+            }
+
+            val intent = Intent(this, SecondActivity::class.java).apply {
+                putExtra("data", data)
+            }
+
             startActivity(intent)
         }
     }
